@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace The_North_Rent_System
 {
@@ -36,6 +37,9 @@ namespace The_North_Rent_System
                 MessageBox.Show(error.Message);
                 kullaniciGiris.baglantiS.Close();
             }
+
+            telefonTextBox.MaxLength = 10;
+
         }
 
         private void eklemeButton_Click(object sender, EventArgs e)
@@ -48,21 +52,30 @@ namespace The_North_Rent_System
                 }
                 else
                 {
-                    if (adSoyadTextBox.Text != "" && eMailTextBox.Text != "" && telefonTextBox.Text != "" &&
-                    sifreTextBox.Text != "" && yetkiComboBox.Text != "" && ilComboBox.Text != "")
+                    if(telefonTextBox.TextLength == 10)
                     {
-                        bool durum = kullaniciGiris.kullaniciEkleme(adSoyadTextBox.Text, eMailTextBox.Text,
-                       telefonTextBox.Text, sifreTextBox.Text, yetkiComboBox.Text, ilComboBox.Text);
-                        if (durum)
-                            MessageBox.Show("İşleminiz Başarıyla Gerçeleşmiştir !", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (adSoyadTextBox.Text != "" && eMailTextBox.Text != "" && telefonTextBox.Text != "" &&
+                    sifreTextBox.Text != "" && yetkiComboBox.Text != "" && ilComboBox.Text != "")
+                        {
+
+                            bool durum = kullaniciGiris.kullaniciEkleme(adSoyadTextBox.Text, eMailTextBox.Text,
+                         telefonTextBox.Text, sifreTextBox.Text, yetkiComboBox.Text, ilComboBox.Text);
+                            if (durum)
+                                MessageBox.Show("İşleminiz Başarıyla Gerçeleşmiştir !", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            else
+                                MessageBox.Show("İşleminizde Hata Meydana Geldi !", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Temizleme();
+                            TabloYenileme();
+
+                        }
                         else
-                            MessageBox.Show("İşleminizde Hata Meydana Geldi !", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Temizleme();
-                        TabloYenileme();
+                        {
+                            MessageBox.Show("Lütfen Tüm alanları doldurun", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Lütfen Tüm alanları doldurun", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Telefon Numaranız hatalı", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -113,7 +126,8 @@ namespace The_North_Rent_System
                 {
                     if (eMailTextBox.Text != "")
                     {
-                        MessageBox.Show("Böyle bir kullanıcı yok!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Böyle bir kullanıcı yok." +
+                            "Lütfen E-mail adresini kontrol edin!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                         MessageBox.Show("Lütfen E-mail alanını doldurun!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -168,7 +182,8 @@ namespace The_North_Rent_System
             {
                 if (eMailTextBox.Text != "")
                 {
-                    MessageBox.Show("Böyle bir kullanıcı yok!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Böyle bir kullanıcı yok." +
+                            "Lütfen E-mail adresini kontrol edin!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                     MessageBox.Show("Lütfen E-mail alanını doldurun!", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -182,5 +197,16 @@ namespace The_North_Rent_System
             this.Hide();
         }
 
+        private void telefonTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void telefonTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }
