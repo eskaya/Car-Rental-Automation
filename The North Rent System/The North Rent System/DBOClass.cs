@@ -5,7 +5,7 @@ namespace The_North_Rent_System
 {
     class DBOClass
     {
-        static string baglantiString = "Data Source = IBRAHIM-VOENUVZ; Initial Catalog = TheNorthDBO; Integrated Security = True";
+        static string baglantiString = "Data Source = DESKTOP-8C5JIMN; Initial Catalog = TheNorthDBO; Integrated Security = True";
         public SqlConnection baglantiS = new SqlConnection(baglantiString);
         SqlCommand sqlKomut;
         public SqlDataAdapter sqlDataSorgu; // Kullanıcıları listelemek için sqlData adapter

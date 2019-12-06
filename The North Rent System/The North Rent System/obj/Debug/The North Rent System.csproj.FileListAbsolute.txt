@@ -13,3 +13,21 @@ C:\Users\Ibrahim\Desktop\TheNorth\The North Rent System\The North Rent System\bi
 C:\Users\Ibrahim\Desktop\TheNorth\The North Rent System\The North Rent System\bin\Debug\itextsharp.xml
 C:\Users\Ibrahim\Desktop\TheNorth\The North Rent System\The North Rent System\obj\Debug\The North Rent System.csproj.CopyComplete
 C:\Users\Ibrahim\Desktop\TheNorth\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.KullaniciRapor.resources
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\bin\Debug\The North Rent System.exe.config
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\bin\Debug\The North Rent System.exe
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\bin\Debug\The North Rent System.pdb
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\bin\Debug\itextsharp.dll
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\bin\Debug\itextsharp.xml
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The North Rent System.csprojAssemblyReference.cache
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.FirstPage.resources
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.KullaniciBilgileri.resources
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.KullaniciRapor.resources
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.MainPage.resources
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.Properties.Resources.resources
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The North Rent System.csproj.GenerateResource.cache
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The North Rent System.csproj.CoreCompileInputs.cache
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The North Rent System.csproj.CopyComplete
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The North Rent System.exe
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The North Rent System.pdb
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.Form2.resources
+C:\Users\esra\Desktop\YazilimMuhendisligi\The North Rent System\The North Rent System\obj\Debug\The_North_Rent_System.Form3.resources

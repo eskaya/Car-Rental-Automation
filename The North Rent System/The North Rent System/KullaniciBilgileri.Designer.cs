@@ -38,14 +38,10 @@
             this.yetkiComboBox = new System.Windows.Forms.ComboBox();
             this.adSoyadTextBox = new System.Windows.Forms.TextBox();
             this.eMailTextBox = new System.Windows.Forms.TextBox();
+            this.telefonTextBox = new System.Windows.Forms.TextBox();
             this.sifreTextBox = new System.Windows.Forms.TextBox();
             this.ilComboBox = new System.Windows.Forms.ComboBox();
             this.kullanicilar = new System.Windows.Forms.DataGridView();
-            this.mailAdres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yetkisi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ilKod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eklemeButton = new System.Windows.Forms.Button();
             this.silmeButton = new System.Windows.Forms.Button();
             this.güncellemeButton = new System.Windows.Forms.Button();
@@ -53,7 +49,11 @@
             this.bilgileriGetir = new System.Windows.Forms.Button();
             this.geriButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.telefonTextBox = new System.Windows.Forms.TextBox();
+            this.mailAdres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adSoyad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yetkisi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ilKod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.kullanicilar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -149,6 +149,13 @@
             this.eMailTextBox.Name = "eMailTextBox";
             this.eMailTextBox.Size = new System.Drawing.Size(144, 20);
             this.eMailTextBox.TabIndex = 8;
+            // 
+            // telefonTextBox
+            // 
+            this.telefonTextBox.Location = new System.Drawing.Point(190, 175);
+            this.telefonTextBox.Name = "telefonTextBox";
+            this.telefonTextBox.Size = new System.Drawing.Size(102, 20);
+            this.telefonTextBox.TabIndex = 9;
             // 
             // sifreTextBox
             // 
@@ -261,43 +268,6 @@
             this.kullanicilar.Size = new System.Drawing.Size(663, 456);
             this.kullanicilar.TabIndex = 12;
             // 
-            // mailAdres
-            // 
-            this.mailAdres.DataPropertyName = "kullaniciMailAdres";
-            this.mailAdres.HeaderText = "Mail Adresi";
-            this.mailAdres.MinimumWidth = 50;
-            this.mailAdres.Name = "mailAdres";
-            this.mailAdres.Width = 150;
-            // 
-            // adSoyad
-            // 
-            this.adSoyad.DataPropertyName = "kullaniciAdSoyad";
-            this.adSoyad.HeaderText = "Ad Soyad";
-            this.adSoyad.MinimumWidth = 50;
-            this.adSoyad.Name = "adSoyad";
-            this.adSoyad.Width = 150;
-            // 
-            // telefon
-            // 
-            this.telefon.DataPropertyName = "kullaniciTelefon";
-            this.telefon.HeaderText = "Telefon Numarası";
-            this.telefon.MinimumWidth = 50;
-            this.telefon.Name = "telefon";
-            // 
-            // yetkisi
-            // 
-            this.yetkisi.DataPropertyName = "kullaniciYetkisi";
-            this.yetkisi.HeaderText = "Kullanıcı Yetki";
-            this.yetkisi.MinimumWidth = 50;
-            this.yetkisi.Name = "yetkisi";
-            this.yetkisi.Width = 120;
-            // 
-            // ilKod
-            // 
-            this.ilKod.DataPropertyName = "ilKodu";
-            this.ilKod.HeaderText = "İl Kodu";
-            this.ilKod.Name = "ilKod";
-            // 
             // eklemeButton
             // 
             this.eklemeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -375,16 +345,42 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // telefonTextBox
+            // mailAdres
             // 
-            this.telefonTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.telefonTextBox.Location = new System.Drawing.Point(190, 175);
-            this.telefonTextBox.MaxLength = 10;
-            this.telefonTextBox.Name = "telefonTextBox";
-            this.telefonTextBox.Size = new System.Drawing.Size(100, 20);
-            this.telefonTextBox.TabIndex = 21;
-            this.telefonTextBox.TextChanged += new System.EventHandler(this.telefonTextBox_TextChanged);
-            this.telefonTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefonTextBox_KeyPress);
+            this.mailAdres.DataPropertyName = "kullaniciMailAdres";
+            this.mailAdres.HeaderText = "Mail Adresi";
+            this.mailAdres.MinimumWidth = 50;
+            this.mailAdres.Name = "mailAdres";
+            this.mailAdres.Width = 150;
+            // 
+            // adSoyad
+            // 
+            this.adSoyad.DataPropertyName = "kullaniciAdSoyad";
+            this.adSoyad.HeaderText = "Ad Soyad";
+            this.adSoyad.MinimumWidth = 50;
+            this.adSoyad.Name = "adSoyad";
+            this.adSoyad.Width = 150;
+            // 
+            // telefon
+            // 
+            this.telefon.DataPropertyName = "kullaniciTelefon";
+            this.telefon.HeaderText = "Telefon Numarası";
+            this.telefon.MinimumWidth = 50;
+            this.telefon.Name = "telefon";
+            // 
+            // yetkisi
+            // 
+            this.yetkisi.DataPropertyName = "kullaniciYetkisi";
+            this.yetkisi.HeaderText = "Kullanıcı Yetki";
+            this.yetkisi.MinimumWidth = 50;
+            this.yetkisi.Name = "yetkisi";
+            this.yetkisi.Width = 120;
+            // 
+            // ilKod
+            // 
+            this.ilKod.DataPropertyName = "ilKodu";
+            this.ilKod.HeaderText = "İl Kodu";
+            this.ilKod.Name = "ilKod";
             // 
             // KullaniciBilgileri
             // 
@@ -392,7 +388,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.telefonTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.geriButton);
             this.Controls.Add(this.bilgileriGetir);
@@ -403,6 +398,7 @@
             this.Controls.Add(this.kullanicilar);
             this.Controls.Add(this.ilComboBox);
             this.Controls.Add(this.sifreTextBox);
+            this.Controls.Add(this.telefonTextBox);
             this.Controls.Add(this.eMailTextBox);
             this.Controls.Add(this.adSoyadTextBox);
             this.Controls.Add(this.yetkiComboBox);
@@ -437,6 +433,7 @@
         private System.Windows.Forms.ComboBox yetkiComboBox;
         private System.Windows.Forms.TextBox adSoyadTextBox;
         private System.Windows.Forms.TextBox eMailTextBox;
+        private System.Windows.Forms.TextBox telefonTextBox;
         private System.Windows.Forms.TextBox sifreTextBox;
         private System.Windows.Forms.ComboBox ilComboBox;
         private System.Windows.Forms.DataGridView kullanicilar;
@@ -452,6 +449,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefon;
         private System.Windows.Forms.DataGridViewTextBoxColumn yetkisi;
         private System.Windows.Forms.DataGridViewTextBoxColumn ilKod;
-        private System.Windows.Forms.TextBox telefonTextBox;
     }
 }
